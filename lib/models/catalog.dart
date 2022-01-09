@@ -1,5 +1,17 @@
 class CatalogModel {
+  static final catModel = CatalogModel.internal();
+
+  CatalogModel.internal();
+
+  factory CatalogModel() => catModel;
+
   static List<Item> items = [];
+
+  // Get item by ID
+  Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
@@ -36,4 +48,6 @@ class Item {
         "color": color,
         "image": image,
       };
+
+  toList() {}
 }
