@@ -12,9 +12,7 @@ class ItemWidget extends StatelessWidget {
       padding: const EdgeInsets.all(9.0),
       child: Card(
         child: ListTile(
-          onTap: () {
-            print("${item.name} pressed");
-          },
+          onTap: () {},
           leading: Image.network(item.image),
           title: Text(item.name),
           subtitle: Text(item.desc),
